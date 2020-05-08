@@ -7,7 +7,7 @@ public class FixedDirRule2D : AbstractFlockRule2D
     public Vector2 dir;
     public float magnitude;
     
-    public override Vector2 Steer(Rigidbody2D boid)
+    public override Vector2 Steer(Boid2D boid)
     {
         return dir.normalized * magnitude;
     }

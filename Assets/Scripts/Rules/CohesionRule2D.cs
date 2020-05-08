@@ -9,7 +9,7 @@ public class CohesionRule2D : AbstractFlockRule2D
 {
     public AbstractBoidSelector2D selector;
     
-    public override Vector2 Steer(Rigidbody2D boid)
+    public override Vector2 Steer(Boid2D boid)
     {
         var pos = (Vector2) boid.transform.position;
         var overlaps = selector.Select(boid);

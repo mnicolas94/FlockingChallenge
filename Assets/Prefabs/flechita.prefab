@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7003378075629112071}
+  - component: {fileID: 6342553832562736903}
   - component: {fileID: 2779859375282143553}
   - component: {fileID: 8869680382345833158}
   - component: {fileID: 7688026050127151019}
-  - component: {fileID: 7510326517179260383}
   m_Layer: 0
   m_Name: flechita
   m_TagString: Boid
@@ -34,6 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6342553832562736903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218426781198998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a9d9e0975ca714d9c6653f51267cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10
+  attachedRigidbody: {fileID: 0}
+  attachedCollider: {fileID: 0}
 --- !u!212 &2779859375282143553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -121,15 +136,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
---- !u!114 &7510326517179260383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218426781198998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2b5be486a93a04a9da77b63c69ab32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -7,16 +7,19 @@ public class Refuge : MonoBehaviour
 {
     public Flock2D flock;
 
-    public Action<Rigidbody2D> eventRefugeeArrived;
+    public Action<Boid2D> eventRefugeeArrived;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // TODO implementar
         if (other.CompareTag("Boid"))
         {
-            flock.RemoveBoid(other.attachedRigidbody);
-            Destroy(other.gameObject);
-            eventRefugeeArrived?.Invoke(other.attachedRigidbody);
+            Boid2D boid = other.GetComponent<Boid2D>();
+            if (boid)
+            {
+                flock.RemoveBoid(boid);
+                Destroy(other.gameObject);
+                eventRefugeeArrived?.Invoke(boid);
+            }
         }
     }
 }

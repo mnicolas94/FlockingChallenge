@@ -9,7 +9,7 @@ public class AlignmentRule2D : AbstractFlockRule2D
 {
     public AbstractBoidSelector2D selector;
 
-    public override Vector2 Steer(Rigidbody2D boid)
+    public override Vector2 Steer(Boid2D boid)
     {
         var overlaps = selector.Select(boid);
         Vector2 steer = Vector2.zero;
@@ -29,7 +29,7 @@ public class AlignmentRule2D : AbstractFlockRule2D
         }
         else
         {
-            return Vector2.zero;
+            return boid.velocity;
         }
     }
 }

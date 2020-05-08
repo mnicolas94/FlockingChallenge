@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class AbstractBoidSelector2D : MonoBehaviour
 {
-    public abstract IEnumerable<Collider2D> Select(Rigidbody2D boid);
+    public abstract IEnumerable<Collider2D> Select(Boid2D boid);
 }

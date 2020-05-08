@@ -8,7 +8,7 @@ public class OrbitRule2D : AbstractFlockRule2D
     public AbstractBoidSelector2D selector;
     public bool clockwise;
     
-    public override Vector2 Steer(Rigidbody2D boid)
+    public override Vector2 Steer(Boid2D boid)
     {
         Vector2 pos = boid.position;
         var boids = new List<Collider2D>(selector.Select(boid));

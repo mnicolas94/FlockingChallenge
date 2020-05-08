@@ -6,6 +6,7 @@ public static class TransformExtensions
     {
         Vector3 pos = transform.position;
         target.z = pos.z;
-        transform.LookAt(pos + Vector3.forward, target - pos);
+//        transform.LookAt(pos + Vector3.forward, target - pos);
+        transform.up = target - pos;
     }
 }

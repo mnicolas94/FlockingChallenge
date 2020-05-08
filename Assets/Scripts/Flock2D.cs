@@ -7,25 +7,36 @@ using UnityEngine.AI;
 public class Flock2D : MonoBehaviour
 {
     public DictionaryRule2DWeight rules;
-    public List<Rigidbody2D> boids;
+    public List<Boid2D> boids;
+    public Action<Boid2D> eventBoidAdded;
+    public Action<Boid2D> eventBoidRemoved;
 
     public float maxSpeed;
     public bool fixedSpeed;  // si es true, tratar a maxSpeed como la velocidad fija
     public bool flocking;
 
-    public Action<Rigidbody2D> eventBoidAdded;
-    public Action<Rigidbody2D> eventBoidRemoved;
+    private void Awake()
+    {
+        if (boids != null)
+        {
+            foreach (var boid in boids)
+            {
+                boid.flockOwner = this;
+            }
+        }
+    }
 
-    public void AddBoid(Rigidbody2D boid)
+    public void AddBoid(Boid2D boid)
     {
         if (!boids.Contains(boid))  // si no está ya
         {
+            boid.flockOwner = this;
             boids.Add(boid);
             eventBoidAdded?.Invoke(boid);
         }
     }
 
-    public Rigidbody2D RemoveBoid(Rigidbody2D boid)
+    public Boid2D RemoveBoid(Boid2D boid)
     {
         if (boids.Contains(boid))
         {
@@ -76,7 +87,7 @@ public class Flock2D : MonoBehaviour
     }
 }
 
-[System.Serializable]
-public class DictionaryRule2DWeight : SerializableDictionaryBase<AbstractFlockRule2D, float>
-{
-}
+//[System.Serializable]
+//public class DictionaryRule2DWeight : SerializableDictionaryBase<AbstractFlockRule2D, float>
+//{
+//}

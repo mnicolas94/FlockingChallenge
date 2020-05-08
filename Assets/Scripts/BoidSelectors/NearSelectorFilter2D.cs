@@ -8,7 +8,7 @@ public class NearSelectorFilter2D : AbstractBoidSelector2D
     public float radius;
     public LayerMask mask;
     
-    public override IEnumerable<Collider2D> Select(Rigidbody2D boid)
+    public override IEnumerable<Collider2D> Select(Boid2D boid)
     {
         IEnumerable<Collider2D> selections;
         if (delegateSelector)
@@ -17,10 +17,10 @@ public class NearSelectorFilter2D : AbstractBoidSelector2D
             selections = delegateSelector.Select(boid);
             foreach (var overlap in selections)
             {
-                Vector2 p = overlap.ClosestPoint(pos);
+                Vector2 p = overlap.ClosestPoint(pos);  // TODO ver si por fin dejo esto o lo de abajo
 //                Vector2 p = overlap.transform.position;
                 var sqrdist = (pos - p).sqrMagnitude;
-                if (sqrdist < radius*radius && ValidLayer(overlap.gameObject))
+                if (sqrdist < radius*radius && mask.IsLayerInMask(overlap.gameObject.layer))
                     yield return overlap;
             }
         }
@@ -34,12 +34,7 @@ public class NearSelectorFilter2D : AbstractBoidSelector2D
         }
     }
 
-    private bool ValidLayer(GameObject go)
-    {
-        return ((1 << go.layer) & mask.value) > 0;
-    }
-
-    private IEnumerable<Collider2D> GetNear(Rigidbody2D boid)
+    private IEnumerable<Collider2D> GetNear(Boid2D boid)
     {
         var pos = (Vector2) boid.transform.position;
         var overlaps = Physics2D.OverlapCircleAll(pos, radius, mask);

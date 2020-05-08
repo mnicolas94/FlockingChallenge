@@ -6,7 +6,7 @@ public class PointingRule2D : AbstractFlockRule2D
 {
     public AbstractBoidSelector2D selector;
     
-    public override Vector2 Steer(Rigidbody2D boid)
+    public override Vector2 Steer(Boid2D boid)
     {
         var overlaps = selector.Select(boid);
         Vector2 sum = Vector2.zero;

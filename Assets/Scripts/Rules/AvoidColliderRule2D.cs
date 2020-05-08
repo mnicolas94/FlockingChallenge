@@ -8,7 +8,7 @@ public class AvoidColliderRule2D : AbstractFlockRule2D
 
     private const float Eps = 1e-8f;
 
-    public override Vector2 Steer(Rigidbody2D boid)
+    public override Vector2 Steer(Boid2D boid)
     {
         var pos = (Vector2) boid.transform.position;
         var overlaps = selector.Select(boid);
