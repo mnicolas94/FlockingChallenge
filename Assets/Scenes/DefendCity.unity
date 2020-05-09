@@ -491,8 +491,8 @@ MonoBehaviour:
   boidPrefab: {fileID: 7823547908842139527, guid: 0009c4665ea165d4fb1b7e2104eb254f,
     type: 3}
   count: 10
-  spawnRadius: 2.5
-  relPosition: {x: -3, y: 0}
+  spawnRadius: 1
+  relPosition: {x: -2.5, y: 0}
 --- !u!1 &405840585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,8 +1604,8 @@ MonoBehaviour:
   boidPrefab: {fileID: 7823547908842139527, guid: 0009c4665ea165d4fb1b7e2104eb254f,
     type: 3}
   count: 10
-  spawnRadius: 2.5
-  relPosition: {x: 3, y: 0}
+  spawnRadius: 1
+  relPosition: {x: 2.5, y: 0}
 --- !u!1 &1647571912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,11 +2312,9 @@ MonoBehaviour:
     - 0.1
     - 1
     - 0.5
-    - 0.5
+    - 0
   boids: []
-  maxSpeed: 3
-  fixedSpeed: 1
-  flocking: 1
+  flocking: 0
 --- !u!1 &147892467006176996
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,10 @@ public class EnemyBoid : MonoBehaviour
 
     private void OnDied()
     {
-        boid.flockOwner.RemoveBoid(boid);
+        foreach (var flock in boid.FlockOwners)
+        {
+            flock.RemoveBoid(boid);
+        }
         Destroy(boid.gameObject);
     }
 }

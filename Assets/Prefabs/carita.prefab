@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 10
+  fixedSpeed: 1
   attachedRigidbody: {fileID: 0}
   attachedCollider: {fileID: 0}
 --- !u!212 &2779859375282143553

@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a9d9e0975ca714d9c6653f51267cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flockOwner: {fileID: 0}
   maxSpeed: 3
+  fixedSpeed: 1
   attachedRigidbody: {fileID: 0}
   attachedCollider: {fileID: 0}
 --- !u!114 &-6809036983855134301
