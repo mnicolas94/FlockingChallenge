@@ -62,12 +62,30 @@ public class Boid2D : MonoBehaviour
 
     public void AddFlockAsOwner(Flock2D flock)
     {
-        _flockOwners.Add(flock);
+        _flockOwners?.Add(flock);
     }
     
     public void RemoveFlockAsOwner(Flock2D flock)
     {
-        _flockOwners.Remove(flock);
+        _flockOwners?.Remove(flock);
+    }
+
+    public void AddToFlock(Flock2D flock)
+    {
+        flock.AddBoid(this);
+    }
+    
+    public void RemoveFromFlock(Flock2D flock)
+    {
+        flock.RemoveBoid(this);
+    }
+    
+    public void RemoveFromAllFlocks()
+    {
+        foreach (var flock in _flockOwners)
+        {
+            RemoveFromFlock(flock);
+        }
     }
     
     public void ApplyRules()
