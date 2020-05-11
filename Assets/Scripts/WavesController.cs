@@ -12,6 +12,15 @@ public class WavesController : MonoBehaviour
     /// </summary>
     public List<Wave> waves;
 
+    #region Parámetros para facilitar la edición en el editor
+
+    public float sumAll;
+    public float multiplyAll;
+    public FlockPopulator2D oldFpSwap;
+    public FlockPopulator2D newFpSwap;
+
+    #endregion
+
     public Action eventLastWaveSpawned;
 
     private int _nextWaveIndex;
@@ -49,10 +58,40 @@ public class WavesController : MonoBehaviour
         wave.populator.count = wave.boidsCount;
         wave.populator.SpawnBoids();
     }
+
+    [NaughtyAttributes.Button()]
+    public void SumAll()
+    {
+        foreach (var wave in waves)
+        {
+            wave.seconds += sumAll;
+        }
+    }
+    
+    [NaughtyAttributes.Button()]
+    public void MultiplyAll()
+    {
+        foreach (var wave in waves)
+        {
+            wave.seconds *= sumAll;
+        }
+    }
+
+    [NaughtyAttributes.Button()]
+    public void SwapPopulators()
+    {
+        foreach (var wave in waves)
+        {
+            if (wave.populator == oldFpSwap)
+            {
+                wave.populator = newFpSwap;
+            }
+        }
+    }
 }
 
 [System.Serializable]
-public struct Wave
+public class Wave
 {
     public FlockPopulator2D populator;
     public int boidsCount;

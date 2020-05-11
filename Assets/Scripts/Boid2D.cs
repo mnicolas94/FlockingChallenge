@@ -10,6 +10,7 @@ public class Boid2D : MonoBehaviour
 //    public DictionaryRule2DWeight rules;  // TODO ver si le pongo reglas independientes también
     public float maxSpeed;
     public bool fixedSpeed;
+    public bool lookAtVelocity = true;
     
     [HideInInspector]
     public Rigidbody2D attachedRigidbody;
@@ -108,6 +109,7 @@ public class Boid2D : MonoBehaviour
         }
         
         velocity = steer;
-        transform.up = velocity;
+        if (lookAtVelocity)
+            transform.up = velocity;
     }
 }

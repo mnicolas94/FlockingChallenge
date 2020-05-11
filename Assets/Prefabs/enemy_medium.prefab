@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2779859375282143553}
   - component: {fileID: 8869680382345833158}
   - component: {fileID: 7453855304090107837}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: enemy_medium
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   fixedSpeed: 1
+  lookAtVelocity: 0
   attachedRigidbody: {fileID: 0}
   attachedCollider: {fileID: 0}
 --- !u!114 &-6809036983855134301
@@ -134,11 +135,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: e484058b8bf3dff459057c23c3c05a72, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
@@ -166,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &7453855304090107837
 CircleCollider2D:
   m_ObjectHideFlags: 0

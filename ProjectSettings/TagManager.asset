@@ -22,11 +22,11 @@ TagManager:
   - RunningEvents
   - Allies
   - Arrows
-  - 
-  - 
-  - 
-  - 
-  - 
+  - EnemiesBehindLoma
+  - AlliesBehindLoma
+  - FarEnemies
+  - FarObstacles
+  - ArrowsLimits
   - 
   - 
   - 

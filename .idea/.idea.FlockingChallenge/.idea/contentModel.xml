@@ -176,6 +176,7 @@
         <e p="Fonts" t="Include">
           <e p="OFL.txt" t="Include" />
         </e>
+        <e p="LomaChangeDirection.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Archer.cs" t="Include" />
           <e p="ArcherController.cs" t="Include" />
@@ -227,6 +228,7 @@
           </e>
           <e p="ValidateFlockingZone.cs" t="Include" />
           <e p="WavesController.cs" t="Include" />
+          <e p="WavesControllerClone.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
