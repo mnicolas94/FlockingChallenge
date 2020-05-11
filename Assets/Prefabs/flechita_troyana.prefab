@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 2779859375282143553}
   - component: {fileID: 8869680382345833158}
   - component: {fileID: 7688026050127151019}
-  m_Layer: 0
+  - component: {fileID: 6001685446276199096}
+  - component: {fileID: 8203675827929486917}
+  - component: {fileID: -1938410778391586816}
+  m_Layer: 13
   m_Name: flechita_troyana
   m_TagString: Boid
   m_Icon: {fileID: 0}
@@ -46,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a9d9e0975ca714d9c6653f51267cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 2
   fixedSpeed: 1
   attachedRigidbody: {fileID: 0}
   attachedCollider: {fileID: 0}
@@ -137,3 +140,46 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.25
+--- !u!114 &6001685446276199096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218426781198998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2026469e54d7944a05b08c68774084, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 1
+  targetLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!114 &8203675827929486917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218426781198998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54b58e2434b6ff4995b9a985959872d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+--- !u!114 &-1938410778391586816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218426781198998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d48b83fd612b684ea741aa9fd71f7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boid: {fileID: 6342553832562736903}
+  health: {fileID: 8203675827929486917}

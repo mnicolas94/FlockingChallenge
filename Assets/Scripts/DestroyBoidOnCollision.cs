@@ -3,15 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CityWall : MonoBehaviour
+public class DestroyBoidOnCollision : MonoBehaviour
 {
-    public Health health;
-
-    public List<Flock2D> flocks;
-
+    public LayerMask mask;
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (mask.IsLayerInMask(other.gameObject.layer))
         {
             var boid = other.gameObject.GetComponent<Boid2D>();
             if (boid)
@@ -24,10 +22,7 @@ public class CityWall : MonoBehaviour
     private void DestroyBoid(Boid2D boid)
     {
         // eliminarlo de su/s flock/s
-        foreach (var flock in flocks)
-        {
-            flock.RemoveBoid(boid);
-        }
+        boid.RemoveFromAllFlocks();
         Destroy(boid.gameObject);
     }
 }

@@ -65,7 +65,7 @@ MonoBehaviour:
   attack: 1
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 9216
 --- !u!114 &7823547908842139527
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlockPopulator2D : MonoBehaviour
 {
-    public Flock2D flock;
+    public List<Flock2D> flocks;
     public Boid2D boidPrefab;
     public int count;
     public float spawnRadius;
@@ -15,12 +15,15 @@ public class FlockPopulator2D : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            var flockTransform = flock.transform;
-            Vector3 flockPos = flockTransform.position;
-            Vector3 randPos = (Vector3)(Random.insideUnitCircle * spawnRadius) + flockPos;
-            Vector3 spawnPos = randPos + (Vector3)relPosition;
-            Boid2D boid = Instantiate(boidPrefab, spawnPos, Quaternion.identity, flockTransform);
-            flock.AddBoid(boid);
+            foreach (var flock in flocks)
+            {
+                var flockTransform = flock.transform;
+                Vector3 flockPos = flockTransform.position;
+                Vector3 randPos = (Vector3)(Random.insideUnitCircle * spawnRadius) + flockPos;
+                Vector3 spawnPos = randPos + (Vector3)relPosition;
+                Boid2D boid = Instantiate(boidPrefab, spawnPos, Quaternion.identity, flockTransform);
+                flock.AddBoid(boid);    
+            }
         }
     }
     

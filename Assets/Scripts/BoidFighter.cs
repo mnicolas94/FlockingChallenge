@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBoid : MonoBehaviour
+public class BoidFighter : MonoBehaviour
 {
     public Boid2D boid;
     public Health health;
@@ -15,10 +15,7 @@ public class EnemyBoid : MonoBehaviour
 
     private void OnDied()
     {
-        foreach (var flock in boid.FlockOwners)
-        {
-            flock.RemoveBoid(boid);
-        }
+        boid.RemoveFromAllFlocks();
         Destroy(boid.gameObject);
     }
 }

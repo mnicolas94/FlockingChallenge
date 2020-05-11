@@ -82,9 +82,9 @@ public class Boid2D : MonoBehaviour
     
     public void RemoveFromAllFlocks()
     {
-        foreach (var flock in _flockOwners)
+        while (_flockOwners.Count > 0)
         {
-            RemoveFromFlock(flock);
+            RemoveFromFlock(_flockOwners[0]);
         }
     }
     

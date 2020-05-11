@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1470320648710004242}
   - component: {fileID: 1470320648710004245}
   - component: {fileID: -8356891637686448721}
-  m_Layer: 0
-  m_Name: flecha
+  m_Layer: 14
+  m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.04, y: 0.48}
+    oldSize: {x: 0.08, y: 0.96}
     newSize: {x: 0.04, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -162,4 +162,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notDestroyCollision:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 9216
