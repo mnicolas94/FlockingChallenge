@@ -178,11 +178,7 @@
         </e>
         <e p="LomaChangeDirection.cs" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="Archer.cs" t="Include" />
-          <e p="ArcherController.cs" t="Include" />
-          <e p="Arrow.cs" t="Include" />
           <e p="Boid2D.cs" t="Include" />
-          <e p="BoidFighter.cs" t="Include" />
           <e p="BoidSelectors" t="Include">
             <e p="AbstractBoidSelector2D.cs" t="Include" />
             <e p="FixedNearObjectsSelector2D.cs" t="Include" />
@@ -199,12 +195,9 @@
           </e>
           <e p="Flock2D.cs" t="Include" />
           <e p="FlockPopulator2D.cs" t="Include" />
-          <e p="FollowRunner.cs" t="Include" />
           <e p="Guide.cs" t="Include" />
           <e p="GuideController.cs" t="Include" />
           <e p="Health.cs" t="Include" />
-          <e p="HealthUI.cs" t="Include" />
-          <e p="MatchRoadWidth.cs" t="Include" />
           <e p="Refuge.cs" t="Include" />
           <e p="Rules" t="Include">
             <e p="AbstractFlockRule2D.cs" t="Include" />
@@ -217,10 +210,27 @@
             <e p="OrbitRule2D.cs" t="Include" />
             <e p="RandomRule2D.cs" t="Include" />
           </e>
-          <e p="RuningEvents.cs" t="Include" />
-          <e p="RunnerController.cs" t="Include" />
-          <e p="RunnerCourier.cs" t="Include" />
-          <e p="TransparentOnBehind.cs" t="Include" />
+          <e p="SceneDefendCityExclusive" t="Include">
+            <e p="Archer.cs" t="Include" />
+            <e p="ArcherController.cs" t="Include" />
+            <e p="Arrow.cs" t="Include" />
+            <e p="BoidFighter.cs" t="Include" />
+            <e p="TransparentOnBehind.cs" t="Include" />
+          </e>
+          <e p="SceneRunningCourierExclusive" t="Include">
+            <e p="FollowRunner.cs" t="Include" />
+            <e p="MatchRoadWidth.cs" t="Include" />
+            <e p="RuningEvents.cs" t="Include" />
+            <e p="RunnerController.cs" t="Include" />
+            <e p="RunnerCourier.cs" t="Include" />
+          </e>
+          <e p="Settings" t="Include">
+            <e p="FlockSettings.cs" t="Include" />
+            <e p="Settings.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="HealthUI.cs" t="Include" />
+          </e>
           <e p="Utils" t="Include">
             <e p="LayerMaskExtensions.cs" t="Include" />
             <e p="TransformExtensions.cs" t="Include" />

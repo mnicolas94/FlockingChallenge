@@ -20,6 +20,8 @@ public class Boid2D : MonoBehaviour
     private List<Flock2D> _flockOwners;
     public List<Flock2D> FlockOwners => _flockOwners;
 
+    private int _framesUntilUpdate;
+    
     private void Awake()
     {
         _flockOwners = new List<Flock2D>();
@@ -29,7 +31,15 @@ public class Boid2D : MonoBehaviour
 
     private void Update()
     {
-        ApplyRules();
+        if (_framesUntilUpdate == 0)
+        {
+            ApplyRules();
+            _framesUntilUpdate = Settings.Instance.flockSettings.framesBetweenFlockStep;
+        }
+        else
+        {
+            _framesUntilUpdate--;
+        }
     }
 
     public Vector2 velocity
