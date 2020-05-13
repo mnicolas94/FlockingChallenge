@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WavesController : MonoBehaviour
 {
@@ -14,8 +15,8 @@ public class WavesController : MonoBehaviour
 
     #region Parámetros para facilitar la edición en el editor
 
-    public float sumAll;
-    public float multiplyAll;
+    public float secondsSumAll;
+    public float secondsMultiplyAll = 1;
     public FlockPopulator2D oldFpSwap;
     public FlockPopulator2D newFpSwap;
 
@@ -42,7 +43,7 @@ public class WavesController : MonoBehaviour
     {
         if (_nextWaveIndex < waves.Count)
         {
-            if (Time.time >= waves[_nextWaveIndex].seconds)
+            if (Time.timeSinceLevelLoad >= waves[_nextWaveIndex].seconds)
             {
                 SpawnWave(waves[_nextWaveIndex]);
                 _nextWaveIndex++;
@@ -64,7 +65,7 @@ public class WavesController : MonoBehaviour
     {
         foreach (var wave in waves)
         {
-            wave.seconds += sumAll;
+            wave.seconds += secondsSumAll;
         }
     }
     
@@ -73,7 +74,7 @@ public class WavesController : MonoBehaviour
     {
         foreach (var wave in waves)
         {
-            wave.seconds *= sumAll;
+            wave.seconds *= secondsSumAll;
         }
     }
 

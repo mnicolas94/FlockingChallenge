@@ -6,6 +6,12 @@ public class MatchRoadWidth : MonoBehaviour
 {
     public new Camera camera;
     public SpriteRenderer road;
+    
+    void Start()
+    {
+//        MatchWidth();
+        MatchBottomPos();
+    }
 
     [NaughtyAttributes.Button()]
     public void MatchWidth()
@@ -16,8 +22,14 @@ public class MatchRoadWidth : MonoBehaviour
         camera.orthographicSize = camNewHeight;
     }
 
-    void Start()
+    [NaughtyAttributes.Button()]
+    public void MatchBottomPos()
     {
-        MatchWidth();
+        Vector3 camPos = camera.transform.position;
+        float halfHeight = camera.orthographicSize;
+        float roadHalfHeight = road.bounds.extents.y;
+        Vector2 roadPos = road.transform.position;
+        camPos.y = roadPos.y - roadHalfHeight + halfHeight;
+        camera.transform.position = camPos;
     }
 }

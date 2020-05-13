@@ -18,28 +18,27 @@ public class Boid2D : MonoBehaviour
     public Collider2D attachedCollider;
     
     private List<Flock2D> _flockOwners;
-    public List<Flock2D> FlockOwners => _flockOwners;
+    public List<Flock2D> FlockOwners
+    {
+        get
+        {
+            if (_flockOwners == null)
+                _flockOwners = new List<Flock2D>();
+            return _flockOwners;
+        }
+    }
 
-    private int _framesUntilUpdate;
-    
     private void Awake()
     {
-        _flockOwners = new List<Flock2D>();
+        if (_flockOwners == null)
+            _flockOwners = new List<Flock2D>();
         attachedRigidbody = GetComponent<Rigidbody2D>();
         attachedCollider = GetComponent<Collider2D>();
     }
 
     private void Update()
     {
-        if (_framesUntilUpdate == 0)
-        {
-            ApplyRules();
-            _framesUntilUpdate = Settings.Instance.flockSettings.framesBetweenFlockStep;
-        }
-        else
-        {
-            _framesUntilUpdate--;
-        }
+        ApplyRules();
     }
 
     public Vector2 velocity
@@ -73,12 +72,13 @@ public class Boid2D : MonoBehaviour
 
     public void AddFlockAsOwner(Flock2D flock)
     {
-        _flockOwners?.Add(flock);
+        
+        FlockOwners?.Add(flock);
     }
     
     public void RemoveFlockAsOwner(Flock2D flock)
     {
-        _flockOwners?.Remove(flock);
+        FlockOwners?.Remove(flock);
     }
 
     public void AddToFlock(Flock2D flock)
@@ -93,16 +93,16 @@ public class Boid2D : MonoBehaviour
     
     public void RemoveFromAllFlocks()
     {
-        while (_flockOwners.Count > 0)
+        while (FlockOwners.Count > 0)
         {
-            RemoveFromFlock(_flockOwners[0]);
+            RemoveFromFlock(FlockOwners[0]);
         }
     }
     
     public void ApplyRules()
     {
         Vector2 steer = Vector3.zero;
-        foreach (var flock in _flockOwners)
+        foreach (var flock in FlockOwners)
         {
             if (!flock.flocking)
                 continue;

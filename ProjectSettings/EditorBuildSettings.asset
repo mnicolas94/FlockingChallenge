@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestFPS.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainScene.unity
+    guid: b5676b98a017a144185e8fd8ee66d5c0
+  - enabled: 1
+    path: Assets/Scenes/RunningCourier.unity
+    guid: d38321ba7c37aa34bb5e4231dbfe686a
+  - enabled: 1
+    path: Assets/Scenes/DefendCityDepth.unity
+    guid: fe9aa6d07bfd14c43b7830df6cb54b33
+  - enabled: 1
+    path: Assets/Scenes/Refugees.unity
+    guid: cbfcacf224dcb4445a0ae21baf149b31
   m_configObjects: {}

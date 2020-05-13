@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,14 @@ public class NearSelectorFilter2D : AbstractBoidSelector2D
     public AbstractBoidSelector2D delegateSelector;
     public float radius;
     public LayerMask mask;
-    
+
+    private Collider2D[] _overlapsBuffer;
+
+    private void Awake()
+    {
+        _overlapsBuffer = new Collider2D[1000];  // número que cogí arbitrariamente
+    }
+
     public override IEnumerable<Collider2D> Select(Boid2D boid)
     {
         IEnumerable<Collider2D> selections;
@@ -37,9 +45,10 @@ public class NearSelectorFilter2D : AbstractBoidSelector2D
     private IEnumerable<Collider2D> GetNear(Boid2D boid)
     {
         var pos = (Vector2) boid.transform.position;
-        var overlaps = Physics2D.OverlapCircleAll(pos, radius, mask);
-        foreach (var overlap in overlaps)
+        int overlapsCount = Physics2D.OverlapCircleNonAlloc(pos, radius, _overlapsBuffer, mask);
+        for (int i = 0; i < overlapsCount; i++)
         {
+            var overlap = _overlapsBuffer[i];
             if (overlap.gameObject != boid.gameObject)
                 yield return overlap;
         }

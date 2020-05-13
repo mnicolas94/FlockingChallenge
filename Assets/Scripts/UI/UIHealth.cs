@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class HealthUI : MonoBehaviour
+public class UIHealth : MonoBehaviour
 {
     public Health health;
     public TextMeshProUGUI text;

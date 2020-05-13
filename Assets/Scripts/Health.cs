@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Health : MonoBehaviour
 
     public Action<int> eventHealed;
     public Action<int> eventDamaged;
-    public Action eventDied;
+    public UnityEvent eventDied;
 
     private int _currentHealth;
     [NaughtyAttributes.ShowNativeProperty]

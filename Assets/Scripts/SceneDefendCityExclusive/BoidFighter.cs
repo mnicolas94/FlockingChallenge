@@ -10,7 +10,7 @@ public class BoidFighter : MonoBehaviour
 
     private void Start()
     {
-        health.eventDied += OnDied;
+        health.eventDied.AddListener(OnDied);
     }
 
     private void OnDied()

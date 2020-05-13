@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boid
   - Enemy
+  - RoadEnd
   layers:
   - Default
   - TransparentFX

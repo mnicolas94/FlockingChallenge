@@ -176,7 +176,6 @@
         <e p="Fonts" t="Include">
           <e p="OFL.txt" t="Include" />
         </e>
-        <e p="LomaChangeDirection.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Boid2D.cs" t="Include" />
           <e p="BoidSelectors" t="Include">
@@ -190,6 +189,7 @@
           </e>
           <e p="CollideDamage.cs" t="Include" />
           <e p="DestroyBoidOnCollision.cs" t="Include" />
+          <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="WavePropertyDrawer.cs" t="Include" />
           </e>
@@ -215,7 +215,9 @@
             <e p="ArcherController.cs" t="Include" />
             <e p="Arrow.cs" t="Include" />
             <e p="BoidFighter.cs" t="Include" />
+            <e p="LomaChangeDirection.cs" t="Include" />
             <e p="TransparentOnBehind.cs" t="Include" />
+            <e p="WinCondition.cs" t="Include" />
           </e>
           <e p="SceneRunningCourierExclusive" t="Include">
             <e p="FollowRunner.cs" t="Include" />
@@ -229,7 +231,10 @@
             <e p="Settings.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="HealthUI.cs" t="Include" />
+            <e p="SceneTransitions.cs" t="Include" />
+            <e p="UIHealth.cs" t="Include" />
+            <e p="UIMainMenu.cs" t="Include" />
+            <e p="UIPauseMenu.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">
             <e p="LayerMaskExtensions.cs" t="Include" />

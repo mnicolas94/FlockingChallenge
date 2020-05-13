@@ -13,6 +13,12 @@ public class Flock2D : MonoBehaviour
 
     public bool flocking;
 
+    public bool Flocking
+    {
+        get => flocking;
+        set => flocking = value;
+    }
+
     private void Awake()
     {
         if (boids != null)
