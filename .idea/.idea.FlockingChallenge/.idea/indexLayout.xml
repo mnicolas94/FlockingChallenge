@@ -12,6 +12,7 @@
       <Path>Library/PackageCache/com.unity.timeline@1.2.10</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
+      <Path>../../../Unity/Unity Technologies Github/2DExtras/2d-extras-master</Path>
     </explicitIncludes>
     <explicitExcludes>
       <Path>.git</Path>

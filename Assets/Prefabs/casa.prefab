@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3129483091363780866}
   - component: {fileID: 4572905625126548160}
   - component: {fileID: 5439192572523329783}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: casa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 5, y: 5}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8879352833908943129}
   - component: {fileID: 4659496058428134463}
   - component: {fileID: 5243318914512151308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TransparencyCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

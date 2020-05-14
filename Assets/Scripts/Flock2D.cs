@@ -26,6 +26,7 @@ public class Flock2D : MonoBehaviour
             foreach (var boid in boids)
             {
                 boid.AddFlockAsOwner(this);
+                eventBoidAdded?.Invoke(boid);
             }
         }
     }

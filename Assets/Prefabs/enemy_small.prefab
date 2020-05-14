@@ -50,6 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  eventDied:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7677210638895483491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +68,7 @@ MonoBehaviour:
   attack: 1
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 9216
+    m_Bits: 74752
 --- !u!114 &7823547908842139527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +139,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 07ac496a7a7a41642973380d6c6c631f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cd2c575421c907428277d33144ff8e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

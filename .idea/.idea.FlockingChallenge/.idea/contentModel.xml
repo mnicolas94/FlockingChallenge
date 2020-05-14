@@ -173,9 +173,13 @@
             <e p="SerializableDictionaryBase.cs" t="Include" />
           </e>
         </e>
+        <e p="CameraMatchColliders.cs" t="Include" />
+        <e p="CameraStopOnRefuge.cs" t="Include" />
+        <e p="FollowFlock.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="OFL.txt" t="Include" />
         </e>
+        <e p="ScoreManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Boid2D.cs" t="Include" />
           <e p="BoidSelectors" t="Include">
@@ -185,7 +189,6 @@
             <e p="FlockSelector2D.cs" t="Include" />
             <e p="NearSelector2D.cs" t="Include" />
             <e p="NearSelectorFilter2D.cs" t="Include" />
-            <e p="PointingRule2D.cs" t="Include" />
           </e>
           <e p="CollideDamage.cs" t="Include" />
           <e p="DestroyBoidOnCollision.cs" t="Include" />
@@ -208,13 +211,14 @@
             <e p="CohesionRule2D.cs" t="Include" />
             <e p="FixedDirRule2D.cs" t="Include" />
             <e p="OrbitRule2D.cs" t="Include" />
+            <e p="PointingRule2D.cs" t="Include" />
             <e p="RandomRule2D.cs" t="Include" />
           </e>
           <e p="SceneDefendCityExclusive" t="Include">
             <e p="Archer.cs" t="Include" />
             <e p="ArcherController.cs" t="Include" />
             <e p="Arrow.cs" t="Include" />
-            <e p="BoidFighter.cs" t="Include" />
+            <e p="BoidAlive.cs" t="Include" />
             <e p="LomaChangeDirection.cs" t="Include" />
             <e p="TransparentOnBehind.cs" t="Include" />
             <e p="WinCondition.cs" t="Include" />
@@ -281,6 +285,83 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.csproj" t="IncludeRecursive" />
+      <e p="Unity.2D.Tilemap.Extras.Editor.csproj" t="IncludeRecursive" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\CoordinateBrush" t="Include">
+      <e p="CoordinateBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\GameObjectBrush" t="Include">
+      <e p="GameObjectBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\GroupBrush" t="Include">
+      <e p="GroupBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\LineBrush" t="Include">
+      <e p="LineBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\PrefabBrush" t="Include">
+      <e p="PrefabBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\RandomBrush" t="Include">
+      <e p="RandomBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\TintBrush" t="Include">
+      <e p="TintBrush.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Brushes\TintBrushSmooth" t="Include">
+      <e p="TintBrushSmooth.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Tiles\HexagonalRuleTile" t="Include">
+      <e p="HexagonalRuleTileEditor.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Tiles\IsometricRuleTile" t="Include">
+      <e p="IsometricRuleTileEditor.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Tiles\RuleOverrideTile" t="Include">
+      <e p="PopulateRuleOverrideTileWizard.cs" t="Include" />
+      <e p="RuleOverrideTileEditor.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Editor\Tiles\RuleTile" t="Include">
+      <e p="CustomRuleTileMenu.cs" t="Include" />
+      <e p="RuleTileEditor.cs" t="Include" />
+      <e p="ScriptTemplates" t="Include">
+        <e p="NewCustomRuleTile.cs.txt" t="Include" />
+      </e>
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Brushes" t="Include">
+      <e p="TintedTilemap.shader" t="Include" />
+      <e p="TintTextureGenerator.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\GridInformation" t="Include">
+      <e p="GridInformation.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\AnimatedTile" t="Include">
+      <e p="AnimatedTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\HexagonalRuleTile" t="Include">
+      <e p="HexagonalRuleTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\IsometricRuleTile" t="Include">
+      <e p="IsometricRuleTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\PipelineTile" t="Include">
+      <e p="PipelineTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\RandomTile" t="Include">
+      <e p="RandomTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\RuleOverrideTile" t="Include">
+      <e p="RuleOverrideTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\RuleTile" t="Include">
+      <e p="RuleTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\TerrainTile" t="Include">
+      <e p="TerrainTile.cs" t="Include" />
+    </e>
+    <e p="C:\_cosas\Desarrollo\GameDev\Unity\Unity Technologies Github\2DExtras\2d-extras-master\Runtime\Tiles\WeightedRandomTile" t="Include">
+      <e p="WeightedRandomTile.cs" t="Include" />
     </e>
     <e p="C:\Users\Miguel\.Rider2019.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Miguel\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_FlockingChallenge.-1301409276.00" t="ExcludeRecursive" />

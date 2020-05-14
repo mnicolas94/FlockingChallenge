@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   fixedSpeed: 1
+  lookAtVelocity: 1
   attachedRigidbody: {fileID: 0}
   attachedCollider: {fileID: 0}
 --- !u!212 &2779859375282143553
@@ -92,7 +93,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3926b05c70631ee43b31dceacc34a616, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd0eca3f5573cb145b2e28edd27c301c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
   attack: 1
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 34816
 --- !u!114 &8203675827929486917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +170,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  eventDied:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-1938410778391586816
 MonoBehaviour:
   m_ObjectHideFlags: 0

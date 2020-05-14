@@ -774,7 +774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P<color=#1b75bc>a</color>use
+  m_text: P<color=#1b75bc>a</color>us<color=#1b75bc>a</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 297deba804ae4f140b431a48fe8b1aaf, type: 2}
   m_sharedMaterial: {fileID: -3667104253458247980, guid: 297deba804ae4f140b431a48fe8b1aaf,
